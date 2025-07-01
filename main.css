@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #1F1F1F; /* Dark background */
+    color: #FDFDFB; /* Soft cream text */
+    font-family: 'Inter', sans-serif; /* Custom font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Custom font for headings */
+}
+
+.navbar {
+    background-color: #14213D; /* Primary blue for navbar */
+}
+
+.section {
+    padding: 4rem 1rem; /* Padding for sections */
+}
+
+.footer {
+    background-color: #14213D; /* Primary blue for footer */
+    padding: 2rem 1rem; /* Padding for footer */
+}
+
+.footer a {
+    color: #FDFDFB; /* Soft cream for footer links */
+}
+
+.btn {
+    background-color: #FCA311; /* Button color */
+    color: #FFFFFF; /* Button text color */
+}
+
+.btn:hover {
+    background-color: #E5B700; /* Button hover color */
+}
