@@ -4,16 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description"
-    content="Trovyn Tech Studio is a creative tech agency delivering stunning UI/UX design and modern websites using Figma, Framer, React, Next.js, Python.">
+    content="Trovyn Tech Studio creates modern, user focused websites and digital experiences designed for clarity, performance, and visual impact.">
   <meta name="keywords"
-    content="Trovyn, Trovyn Tech Studio, UI/UX Design, Web Development, Figma, Framer,Creative Agency, Web Design, India Tech Studio">
+    content="Trovyn, Trovyn Tech Studio, trovyn studio, UI/UX Design, Web Development, Figma, Framer,Creative Agency, Web Design, India Tech Studio">
   <meta name="author" content="Trovyn Tech Studio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Open Graph for social previews -->
   <meta property="og:title" content="Trovyn Tech Studio">
-  <meta property="og:description"
-    content="We create premium, modern digital experiences using the latest tools.">
+  <meta property="og:description" content="We create premium, modern digital experiences using the latest tools.">
   <meta property="og:image" content="favicon.png">
   <meta property="og:url" content="https://trovynstudio.vercel.app/">
   <meta property="og:type" content="website">
@@ -61,6 +60,39 @@
 
     .bg-cream {
       background-color: #FDFDFB;
+    }
+
+    .trovyn-card {
+      transition: transform 0.35s cubic-bezier(.2, .9, .2, 1),
+        box-shadow 0.35s cubic-bezier(.2, .9, .2, 1);
+    }
+
+    .trovyn-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 30px 60px rgba(255, 255, 255, 0.1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .trovyn-card,
+      .trovyn-card:hover {
+        transition: none;
+        transform: none;
+      }
+    }
+
+    /* Mobile tap effect class */
+    .trovyn-card.active-touch {
+      transform: translateY(-6px) scale(1.03) !important;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12) !important;
+      transition: transform .3s ease, box-shadow .3s ease !important;
+    }
+
+    /* Remove long-press highlight + improve touch feel */
+    .trovyn-card {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform .3s ease, box-shadow .3s ease;
     }
   </style>
 </head>
@@ -113,52 +145,41 @@
         </h1>
 
         <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-          At TROVYN Tech, we don’t just build websites we craft digital experiences that leave a mark.
-          Powered by passionate creators and next-gen tools, we turn
-          ideas into clean, fast, and beautiful user interfaces.
+          At TROVYN, we focus on creating clean, modern, and well designed web experiences. We combine thoughtful
+          design with solid development to bring ideas to life in a simple, effective way.
         </p>
 
         <p class="text-md text-gray-400 mb-8">
-          We are a tech studio driven by emerging talent creative-tech studio bridging creativity with performance.
-          Whether it’s a brand launch, portfolio, landing page, or digital product we’re the silent force behind your
-          pixel perfect presence.
+          From portfolios and landing pages to small business sites, we help craft a polished online presence that feels
+          clear, modern, and easy to use.
         </p>
 
-        <a href="Founder.html"
-          class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">
-          👋Meet The Founder →
-        </a>
+        
+        <a href="#contact"
+        class="inline-block px-8 py-3 rounded-2xl bg-blue-600 text-white font-heading text-lg shadow-lg hover:bg-blue-700 transition">Get Started</a>
+        
       </div>
     </section>
-    <!-- <a href="#contact"
-      class="inline-block px-8 py-3 rounded-full bg-blue-600 text-white font-heading text-lg shadow-lg hover:bg-blue-700 transition">Contact
-      Us</a>
-
-    <img src="https://source.unsplash.com/600x300/?technology,creative" alt="Creative Tech"
-      class="mt-10 rounded-xl shadow-accent w-full max-w-lg mx-auto" />
-  </section> -->
 
     <!-- ABOUT Section -->
     <section id="about" class="py-20 px-4 bg-primary">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 text-white">About Us</h2>
         <p class="text-lg md:text-xl text-cream mb-8">
-          TROVYN Tech is a premium creative tech studio specializing in web, mobile, and digital innovation. Our team
-          fuses
-          design and engineering to deliver standout solutions for modern brands.
+          Trovyn Tech Studio is a modern digital agency who build high impact web
+          experiences.
+          we collaborate across borders to deliver quality without limitations.
+          Our mission is to turn ideas into scalable, visually compelling, and performance focused digital solutions.
         </p>
         <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
           <img src="card.png" alt="Our Team" class="rounded-lg shadow-accent w-48 h-48 object-cover" />
           <div class="text-center md:text-left max-w-md">
             <h3 class="text-2xl font-semibold text-primary mb-2"> Together, We Build</h3>
             <p class="text-gray-400">
-              We’re a growing creative-tech studio built with passion and purpose. Our virtual team thrives on
-              innovation, collaboration, and hands on learning.
+              We’re a growing tech studio built with passion and purpose, thriving on innovation, collaboration, and
+              hands on learning.
             </p>
-            <a href="join.html"
-              class="inline-block mt-4 px-5 py-2 border-2 border-primary text-primary font-semibold rounded-full hover:bg-gray-700 hover:text-white animate-pulse transition">
-              Join Us
-            </a>
+            
           </div>
           <ul class="text-left space-y-3 text-cream font-body">
             <li>✔️ Bold, modern design</li>
@@ -175,187 +196,216 @@
       <div class="max-w-5xl mx-auto text-center">
 
         <p class="text-lg text-white mb-6 leading-relaxed">
-          TROVYN is a creative-tech agency run by passionate builders, creators, and early career talent.
-          We are a <strong>100% virtual company</strong>, collaborating remotely to deliver high quality work without
-          borders.
-          Our mission is to empower fresh minds to build real world projects that combine visual storytelling with
-          performance driven development.
+          Trovyn is a premium creative studio focused on web, mobile, and digital innovation. We combine design and
+          engineering to build standout experiences for modern brands.
         </p>
 
-        <p class="text-md text-gray-300 mb-10 leading-relaxed">
-          We design, prototype, and develop modern digital products using a lightweight but powerful stack:
-          <strong>Figma</strong> for UI/UX, <strong>Framer</strong> for interactivity, <strong>Canva</strong> for
-          branding,
-          and a development pipeline of <strong>React</strong>, <strong>Next.js</strong>, and <strong>Python</strong>.
-        </p>
+        <section id="services" class="py-20 text-black px-6">
+          <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl text-white font-bold mb-10">Why Choose Us</h2>
 
-        <div class="grid md:grid-cols-3 gap-6 text-left">
-          <div class="bg-purple-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-2">Creative by Default</h3>
-            <p class="text-gray-600">Every project starts with ideas. We bring those ideas to life through clean design,
-              clear structure, and simple interactions.</p>
-          </div>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto ">
+                <h3 class="text-xl font-semibold mb-2">Expertise That Delivers</h3>
+                <p class="text-gray-600">Professional solutions backed by experience and proven results.</p>
+              </div>
 
-          <div class="bg-blue-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-2">Interactive Experiences</h3>
-            <p class="text-gray-600">We create dynamic, engaging web interactions that make users feel your brand powered by
-               smooth animations, motion design, and intuitive navigation for a truly immersive digital experience.</p>
-          </div>
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-2">Tailored Solutions</h3>
+                <p class="text-gray-600">We design and develop with your unique business goals in mind.</p>
+              </div>
 
-          <div class="bg-yellow-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-2">Intern-Led, Quality Focused</h3>
-            <p class="text-gray-600">
-              Every project at TROVYN Tech is built by skilled interns and early career creators who are passionate
-              about delivering real value. We focus on quality, creativity, and clear communication to ensure our work
-              meets client expectations.
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-2">End-to-End Support</h3>
+                <p class="text-gray-600">
+                  From concept to deployment, we ensure smooth project execution and ongoing assistance.
+                </p>
+              </div>
+            </div>
+
+            <p class="text-md text-gray-300 mt-10">
+              We are not just a tech studio we are a community of innovators, creators, and builders. Join us on this
+              journey to create impactful digital experiences.
             </p>
+
           </div>
-        </div>
-
-        <p class="text-md text-gray-300 mt-10">
-          We are not just a tech studio; we are a community of innovators, creators, and builders. Join us on this
-          journey to create impactful digital experiences.
-        </p>
-
-      </div>
-    </section>
+        </section>
 
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 text-black px-6">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl text-white font-bold mb-10">Our Services</h2>
+        <!-- Services Section -->
+        <section id="services" class="py-20 text-black px-6">
+          <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl text-white font-bold mb-10">Our Services</h2>
 
-        <div class="grid md:grid-cols-3 gap-8 text-left">
-          <!-- UI/UX Design -->
-          <div class="bg-green-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
-            <p class="text-gray-600">We design clean, modern, and mobile friendly interfaces using Figma from
-              wireframes to high fidelity mockups.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+              <!-- UI/UX Design -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Web Design</h3>
+                <p class="text-gray-600">Creating visually engaging and intuitive websites that provide seamless user
+                  experiences.</p>
+              </div>
+
+              <!-- development -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Full-Stack Development</h3>
+                <p class="text-gray-600">Building robust, scalable web applications tailored to your business needs.</p>
+              </div>
+
+              <!-- automation -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Automation & Integrations</h3>
+                <p class="text-gray-600">Streamlining processes with smart automation and seamless system integrations.
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <!-- Prototyping -->
-          <div class="bg-blue-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-3">Interactive Prototypes</h3>
-            <p class="text-gray-600">Our team brings ideas to life with interactive, clickable prototypes that feel like
-              the real product.</p>
+
+        <!-- Aproch -->
+        <section id="services" class="py-20 text-black px-6">
+          <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl text-white font-bold mb-10">Our Approach</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+              <!-- planning -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Strategic Planning</h3>
+                <p class="text-gray-600">Creating visually engaging and intuitive websites that provide seamless user
+                  experiences.</p>
+              </div>
+
+              <!-- design -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Creative Design</h3>
+                <p class="text-gray-600">Combining aesthetics and functionality to craft captivating digital
+                  experiences.</p>
+              </div>
+
+              <!-- deployment -->
+              <div class="trovyn-card bg-white backdrop-blur-lg rounded-2xl p-6 w-full max-w-xs mx-auto">
+                <h3 class="text-xl font-semibold mb-3">Reliable Deliverys</h3>
+                <p class="text-gray-600">On time, professional, and high quality web solutions that exceed expectations.
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <!-- Branding -->
-          <div class="bg-pink-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-3">Branding Kits</h3>
-            <p class="text-gray-600">We create quick, stylish logos and brand assets for startups using Canva fast,
-              affordable, and beautiful.</p>
+
+        <!-- CONTACT Section -->
+        <section id="contact">
+          <form action="https://formspree.io/f/mdkzvdrz" method="POST" class="space-y-6">
+            <!-- Hidden subject line for better inbox clarity -->
+            <input type="hidden" name="_subject" value="New client message from TROVYN">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Your full name" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-2xl text-black focus:outline-none focus:ring-2 focus:ring-black" />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                <input type="email" name="email" id="email" placeholder="you@example.com" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-2xl text-black focus:outline-none focus:ring-2 focus:ring-black" />
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+              <textarea name="message" id="message" rows="2" placeholder="Your message..."
+                class="w-full px-4 py-3 border border-gray-300 rounded-2xl text-black focus:outline-none focus:ring-2 focus:ring-black"
+                required></textarea>
+            </div>
+
+            <div class="flex justify-center">
+              <button type="submit"
+                class="bg-blue-700 text-white px-6 py-3 rounded-2xl hover:bg-gray-800 transition duration-300 flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+
+
+
+        <!-- Footer -->
+        <footer class="mt-16 bg-primary border-t border-blue-900 py-6">
+          <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            
+
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold text-cream mb-3">Quick Links</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+                <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                <li><a href="#legal.html" class="hover:text-blue-400">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+              <h3 class="text-lg font-semibold text-cream mb-3">Contact</h3>
+              <p class="text-gray-300 mb-3">trovyntechstudio@gmail.com</p>
+              <p class="text-gray-300">
+                Ground floor, Bhoomi Appartment,<br>
+                Opp. Dr. Subhash University,<br>
+                Khamdhrol Road, Junagadh, 362001
+              </p>
+            </div>
+
           </div>
+          <div class="text-center text-xs text-blue-200 mt-10">&copy; 2025 TROVYN. All rights reserved.</div>
+        </footer>
 
-          <!-- Web Development -->
-          <div class="bg-gray-100 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-3">Web Development</h3>
-            <p class="text-gray-600">We build dynamic web applications using Next.js, React, and Python optimized for performance,
-               scalability, and speed.</p>
-          </div>
+        <!-- Mobile menu JS -->
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+          // Close mobile menu on link click
+          document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+          });
+          // Touch effect for mobile devices
+          document.querySelectorAll('.trovyn-card').forEach(card => {
 
-          <!-- Intern-Powered Builds -->
-          <div class="bg-pink-50 p-6 rounded shadow-sm">
-            <h3 class="text-xl font-semibold mb-3">Intern Powered Builds</h3>
-            <p class="text-gray-600">All work is completed by our trained interns under clear guidance delivering
-              budget friendly, high impact solutions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            // When finger touches the card => activate instantly  
+            card.addEventListener('touchstart', () => {
+              card.classList.add('active-touch');
+            }, { passive: true });
 
+            // When finger leaves => remove effect after tiny delay  
+            card.addEventListener('touchend', () => {
+              setTimeout(() => {
+                card.classList.remove('active-touch');
+              }, 120); // smooth feel
+            });
 
-    <!-- CONTACT Section -->
-    <section id="contact">
-    <form action="https://formspree.io/f/mdkzvdrz" method="POST" class="space-y-6">
-      <!-- Hidden subject line for better inbox clarity -->
-      <input type="hidden" name="_subject" value="New client message from TROVYN">
+            // If touch is cancelled (scrolling etc.)
+            card.addEventListener('touchcancel', () => {
+              card.classList.remove('active-touch');
+            });
+          });
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
-          <input type="text" name="name" id="name" placeholder="Your full name" required
-            class="w-full px-4 py-3 border border-gray-300 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-black" />
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-          <input type="email" name="email" id="email" placeholder="you@example.com" required
-            class="w-full px-4 py-3 border border-gray-300 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-black" />
-        </div>
-      </div>
-
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
-        <textarea name="message" id="message" rows="2" placeholder="Your message..."
-          class="w-full px-4 py-3 border border-gray-300 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-black"
-          required></textarea>
-      </div>
-
-      <div class="flex justify-center">
-        <button type="submit"
-          class="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300 flex items-center justify-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-          <span>Send Message</span>
-        </button>
-      </div>
-    </form>
-   </section>
+        </script>
 
 
 
-
-    <!-- Footer -->
-    <footer class="mt-16 bg-primary border-t border-blue-900 py-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-        <span class="font-logo text-xl font-bold text-white mb-2 md:mb-0">TROVYN</span>
-        <div class="flex space-x-4">
-          <a href="#" aria-label="Twitter" class="text-white hover:text-blue-400 transition">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M24 4.56c-.883.392-1.832.656-2.828.775a4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.38 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.93-.856 2.011-.856 3.17 0 2.188 1.115 4.117 2.823 5.247-.807-.026-1.566-.247-2.228-.616v.062c0 3.053 2.173 5.599 5.058 6.175-.53.144-1.087.222-1.662.222-.406 0-.799-.039-1.184-.112.8 2.497 3.122 4.314 5.872 4.364A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.56z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="text-white hover:text-blue-400 transition">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Instagram" class="text-white hover:text-blue-400 transition">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.012-4.947.07-1.276.058-2.687.334-3.678 1.325-.991.991-1.267 2.402-1.325 3.678-.058 1.28-.07 1.688-.07 4.947s.012 3.667.07 4.947c.058 1.276.334 2.687 1.325 3.678.991.991 2.402 1.267 3.678 1.325 1.28.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.276-.058 2.687-.334 3.678-1.325.991-.991 1.267-2.402 1.325-3.678.058-1.28.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.058-1.276-.334-2.687-1.325-3.678-.991-.991-2.402-1.267-3.678-1.325-1.28-.058-1.688-.07-4.947-.07z" />
-              <path
-                d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="text-center text-xs text-blue-200 mt-2">&copy; 2025 TROVYN. All rights reserved.</div>
-    </footer>
-
-    <!-- Mobile menu JS -->
-    <script>
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      // Close mobile menu on link click
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-      });
-    </script>
-
-
-
-    <div id="root"></div>
-    <script src="src/app.js" defer></script>
+        <div id="root"></div>
+        <script src="src/app.js" defer></script>
 </body>
 
 </html>
